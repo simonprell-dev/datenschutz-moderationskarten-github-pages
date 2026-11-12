@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101d30">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="Touch-optimierte Moderationskarten für ein Interview über Datenschutz und Digitalisierung.">
+  <title>Datenschutz · Moderationskarten</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">◈</span><span>INTERVIEW <span class="brand-divider">/</span> DATENSCHUTZ</span></div>
+      <div class="header-actions">
+        <span class="top-progress" id="top-progress">01 / 08</span>
+        <button class="icon-button" id="overview-button" type="button" aria-label="Alle Karten anzeigen" title="Kartenübersicht"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></button>
+      </div>
+    </header>
+    <main class="stage" id="stage" tabindex="-1">
+      <div class="meta-line"><div class="speaker-tag" id="speaker-tag"><span class="speaker-dot"></span><span id="speaker-name">PHILIPP</span> <span class="speaker-suffix">ANTWORTET</span></div><span class="topic-label" id="topic-label">DATENSAMMLUNG</span></div>
+      <div class="card-content" id="card-content" aria-live="polite" aria-atomic="true">
+        <div class="question-group"><div class="eyebrow">DIE FRAGE <span id="question-number">01</span></div><h1 id="question"></h1></div>
+        <section class="cues-area" aria-labelledby="cues-heading"><h2 class="section-label" id="cues-heading">GEDANKENSTÜTZE</h2><div class="cues" id="cues"></div></section>
+        <section class="answer-area" aria-labelledby="answer-heading"><div class="answer-heading-line"><h2 class="section-label" id="answer-heading">SO KÖNNTEST DU ES SAGEN</h2><span class="reading-hint">FREI FORMULIEREN · NICHT ABLESEN</span></div><p class="answer" id="answer"></p></section>
+      </div>
+      <div class="card-actions"><button class="details-button" id="details-button" type="button" aria-haspopup="dialog"><span class="details-button-icon" aria-hidden="true">＋</span><span>Weiterführende Informationen</span></button><span class="swipe-hint">← WISCHEN ZUM WECHSELN →</span></div>
+    </main>
+    <footer class="bottom-bar"><button class="nav-button" id="prev-button" type="button" aria-label="Vorherige Frage"><span aria-hidden="true">←</span><span>Zurück</span></button><div class="steps" id="steps" aria-label="Fortschritt"></div><button class="nav-button next" id="next-button" type="button"><span id="next-label">Weiter</span><span aria-hidden="true">→</span></button></footer>
+    <div class="safe-footer"></div>
+  </div>
+
+  <div class="overlay" id="details-overlay" hidden><div class="overlay-backdrop" data-close="details"></div><section class="sheet" role="dialog" aria-modal="true" aria-labelledby="details-title" tabindex="-1"><div class="sheet-grip"></div><div class="sheet-header"><div><div class="eyebrow">HINTERGRUNDWISSEN</div><h2 id="details-title">Mehr zur Frage</h2></div><button class="close-button" type="button" data-close="details" aria-label="Schließen">✕</button></div><div class="sheet-scroll"><p class="detail-intro" id="detail-intro"></p><div id="detail-list" class="detail-list"></div><div class="resource-block"><h3>Zum Weiterlesen</h3><div id="resources"></div></div><div class="tip-box"><div class="tip-kicker">ZUM ABSCHLUSS SAGEN</div><p id="detail-tip"></p></div></div></section></div>
+  <div class="overlay" id="overview-overlay" hidden><div class="overlay-backdrop" data-close="overview"></div><section class="sheet overview-sheet" role="dialog" aria-modal="true" aria-labelledby="overview-title" tabindex="-1"><div class="sheet-grip"></div><div class="sheet-header"><div><div class="eyebrow">SCHNELLNAVIGATION</div><h2 id="overview-title">Alle acht Fragen</h2></div><button class="close-button" type="button" data-close="overview" aria-label="Schließen">✕</button></div><div class="overview-list" id="overview-list"></div></section></div>
+</body>
+</html>
