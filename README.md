@@ -14,6 +14,9 @@ Die Seite besteht aus reinen statischen Dateien und funktioniert auf GitHub Page
 
 Für eine **User-Page** mit Repository `BENUTZERNAME.github.io` lautet die Adresse entsprechend `https://BENUTZERNAME.github.io/`.
 
+**Live-Seite:** https://simonprell-dev.github.io/datenschutz-moderationskarten-github-pages/
+**Repository:** https://github.com/simonprell-dev/datenschutz-moderationskarten-github-pages
+
 ## Bedienung auf dem iPad
 
 - Im Querformat besonders gut lesbar; Hochformat funktioniert ebenfalls.
